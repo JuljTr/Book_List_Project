@@ -37,8 +37,19 @@ class UI {
 
     static clearFields() {
         document.querySelector("#title").value = "";
-        document.querySelector("#author").value ="";
-        document.querySelector("#isbn").value="";
+        document.querySelector("#author").value = "";
+        document.querySelector("#isbn").value = "";
+    }
+
+    static showAlertMessage(message, className) {
+        const div = document.createElement("div");
+        div.className = `alert alert-${className}`;
+        div.appendChild(document.createTextNode(`${message}`));
+        const form = document.querySelector("#form");
+        const container = document.querySelector("#container");
+        container.insertBefore(div, form);
+
+        setTimeout(() => document.querySelector(".alert").remove(), 3000)
     }
 }
 
@@ -49,11 +60,17 @@ document.querySelector("#form").addEventListener("submit", () => {
     let author = document.querySelector("#author").value;
     let isbn = document.querySelector("#isbn").value;
 
-    const book = new Book(title, author, isbn);
-    UI.addBook(book);
-    UI.clearFields();
+    if (title === "" || author === "" || isbn === "") {
+        UI.showAlertMessage("All fields must be filled!", "danger");
+    } else {
+        const book = new Book(title, author, isbn);
+        UI.addBook(book);
+        UI.clearFields();
+        UI.showAlertMessage("You have added a new Book!", "success");
+    }
 })
 
-document.addEventListener("click", (e) => {
+document.querySelector("#book-list").addEventListener("click", (e) => {
     UI.deleteBook(e.target);
+    UI.showAlertMessage("Book is removed!", "success")
 })
