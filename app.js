@@ -30,14 +30,30 @@ class UI {
     }
 
     static deleteBook(el) {
-        if(el.classList.contains('delete')){
+        if (el.classList.contains('delete')) {
             el.parentElement.parentElement.remove()
         }
+    }
+
+    static clearFields() {
+        document.querySelector("#title").value = "";
+        document.querySelector("#author").value ="";
+        document.querySelector("#isbn").value="";
     }
 }
 
 document.addEventListener("DOMContentLoaded", UI.displayBooks);
+
+document.querySelector("#form").addEventListener("submit", () => {
+    let title = document.querySelector("#title").value;
+    let author = document.querySelector("#author").value;
+    let isbn = document.querySelector("#isbn").value;
+
+    const book = new Book(title, author, isbn);
+    UI.addBook(book);
+    UI.clearFields();
+})
+
 document.addEventListener("click", (e) => {
-    console.log(e)
-    UI.deleteBook(e.target)
+    UI.deleteBook(e.target);
 })
