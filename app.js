@@ -24,11 +24,20 @@ class UI {
         <td>${book.title}</td>
         <td>${book.author}</td>
         <td>${book.isbn}</td>
-        <td><a href="#" class="btn btn-primary">X</a></td>`
+        <td><a href="#" class="btn btn-primary delete">X</a></td>`
 
         list.appendChild(tableRow);
     }
 
+    static deleteBook(el) {
+        if(el.classList.contains('delete')){
+            el.parentElement.parentElement.remove()
+        }
+    }
 }
 
-document.addEventListener("DOMContentLoaded", UI.displayBooks)
+document.addEventListener("DOMContentLoaded", UI.displayBooks);
+document.addEventListener("click", (e) => {
+    console.log(e)
+    UI.deleteBook(e.target)
+})
