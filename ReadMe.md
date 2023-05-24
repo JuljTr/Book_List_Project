@@ -5,3 +5,7 @@ The BookList App project is built with Vanilla Javascript; book titles and their
 + Arrow Functions 
 + DOM Manipulation 
 + Local Storage
+
+-[udemy:The Web Developer Bootcamp 2023](https://www.udemy.com/course/the-web-developer-bootcamp/)
+-[Window: localStorage property](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+-[JavaScript localStorage](JavaScript localStorage)
