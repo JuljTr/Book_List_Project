@@ -3,8 +3,6 @@ The BookList App project is built with Vanilla Javascript; book titles and their
 
 ### Recources Used
 
-# General searching
-
   - [Google search](https://www.google.com/)
   - [MDN web docs](https://developer.mozilla.org/en-US/)
   - [CSS-Tricks](https://css-tricks.com/)
