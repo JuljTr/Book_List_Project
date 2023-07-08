@@ -5,13 +5,12 @@ The BookList App project is built with Vanilla Javascript; book titles and their
 
 - **General searching**
 
-- [Google search](https://www.google.com/)
-- [MDN web docs](https://developer.mozilla.org/en-US/)
-- [CSS-Tricks](https://css-tricks.com/)
-- [Bootstrap5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
-- [udemy:The Web Developer Bootcamp 2023](https://www.udemy.com/course/the-web-developer-bootcamp/)
-- [Window: localStorage property](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
-- [JavaScript localStorage](JavaScript localStorage)
+ - [Google search](https://www.google.com/)
+ - [MDN web docs](https://developer.mozilla.org/en-US/)
+ - [CSS-Tricks](https://css-tricks.com/)
+ - [Bootstrap5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+ - [udemy:The Web Developer Bootcamp 2023](https://www.udemy.com/course/the-web-developer-bootcamp/)
+ - [Window: localStorage property](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 
 ## Author 
 
